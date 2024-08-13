@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Gaming</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, rgba(46, 46, 46, 0.9), rgba(26, 26, 26, 0.9)), url('https://wallpaperaccess.com/full/2637581.jpg') center/cover;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff007f;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 4rem;
+            color: #ff007f;
+            text-shadow: 0 0 15px #00f;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 15px #ff007f, 0 0 25px #00f, 0 0 35px #00f;
+            }
+            to {
+                text-shadow: 0 0 25px #ff007f, 0 0 35px #00f, 0 0 45px #00f;
+            }
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            position: relative;
+        }
+        nav a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ffcc00;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        nav a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff007f;
+            text-shadow: 0 0 10px #00f;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .game-card {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 15px;
+            border: 3px solid #ff007f;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #ff007f;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .game-card h3 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+            color: #ffcc00;
+        }
+        footer {
+            background: #2e2e2e;
+            padding: 30px;
+            text-align: center;
+            border-top: 3px solid #ff007f;
+        }
+        footer p {
+            margin: 0;
+            color: #aaa;
+            font-size: 1rem;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.8rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-links a:hover {
+            color: #ffcc00;
+            transform: scale(1.2);
+        }
+        .background {
+            background: url('https://wallpaperaccess.com/full/2637581.jpg') center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            filter: blur(10px) brightness(0.5);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+    <h1>Galaxy Gaming</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="content social-links">
+    <a href="https://discord.gg/4bjsqRWp67" target="_blank">Discord</a>
+    <a href="https://www.twitch.tv/galaxygaming65" target="_blank">Twitch</a>
+    <a href="https://www.youtube.com/@galaxy_gaming65?si=J6f0Dn5_pdjoU766" target="_blank">YouTube</a>
+</div>
+
+<div class="content" id="home">
+    <h2>Welcome to Galaxy Gaming</h2>
+    <p>Your ultimate destination for the latest and greatest in gaming!</p>
+</div>
+
+<div class="content" id="games">
+    <h2>Our Games</h2>
+    <div class="games-grid">
+        <div class="game-card">
+            <img src="https://cdn.discordapp.com/attachments/1230894241954267207/1272975508690309241/games_thumbnail_brawlstars.5cd76330.webp?ex=66bcee54&is=66bb9cd4&hm=7590581744c219f596dba3620f656a220b1037b752fd3d22c73d0fdc7dd52013&" alt="Game 1">
+            <h3>Brawl Stars</h3>
+        </div>
+        <div class="game-card">
+            <img src="https://cdn.discordapp.com/attachments/1230894241954267207/1272975509218922566/website_309b26b7bc.webp?ex=66bcee54&is=66bb9cd4&hm=c44a75881447c54867e285f1d24a03c94888f3b63cdd4263dceecd1559db692a&" alt="Game 2">
+            <h3>Stumble Guys</h3>
+        </div>
+        <div class="game-card">
+            <img src="https://cdn.discordapp.com/attachments/1230894241954267207/1272977332486803536/9k.png?ex=66bcf006&is=66bb9e86&hm=a8ce090ab5568ac37ba336ae93892965b8abd3fb2eb8a448c6a8159356f69853&" alt="Game 3">
+            <h3>Fortnite</h3>
+        </div>
+        <!-- Add more game cards as needed -->
+    </div>
+</div>
+
+<div class="content" id="about">
+    <h2>About Us</h2>
+    <p>Galaxy Gaming is a premier gaming hub where you can find and play the best games in the galaxy!</p>
+</div>
+
+<div class="content" id="contact">
+    <h2>Contact Us</h2>
+    <p>Kérdésed van? Fordulj felénk bizalommal a <a href="mailto:contact_galaxygaming@freemail.hu">contact_galaxygaming@freemail.hu</a></p>
+    <p>Have questions? Reach out to us at <a href="mailto:contact_galaxygaming@freemail.hu">contact_galaxygaming@freemail.hu</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Galaxy Gaming. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://discord.gg/4bjsqRWp67" target="_blank">Discord</a>
+        <a href="https://www.twitch.tv/galaxygaming65" target="_blank">Twitch</a>
+        <a href="https://www.youtube.com/@galaxy_gaming65?si=J6f0Dn5_pdjoU766" target="_blank">YouTube</a>
+    </div>
+</footer>
+
+</body>
+</html>
